@@ -52,9 +52,25 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             this.wrapPanel.Children.Clear();
 
             // Add in display content
-            for (var index = 0; index < 15; ++index)
+            Random random = new Random((int)DateTime.Now.Ticks);
+            int value;
+            int temp;
+            int[] num_array = new int[] {1,2,3,4,5,6,7,8,9,10,11,12,13};
+
+            for(int i =0; i < 13; ++i)
             {
-                var button = new KinectTileButton { Label = (index + 1).ToString(CultureInfo.CurrentCulture) };
+                value = random.Next(1, 13);
+                temp = num_array[value];
+                num_array[value] = num_array[i];
+                num_array[i] = temp;
+            }
+
+            for (var index = 0; index < 13; ++index)
+            {
+                ///value = random.Next(1, 13);
+                var button = new KinectTileButton { Label = num_array[index].ToString(CultureInfo.CurrentCulture)};
+                ///button.Background = "{StaticResource BlueBrush}";
+                ///button.Value = value;
                 this.wrapPanel.Children.Add(button);
             }
 
@@ -163,9 +179,10 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         private void KinectTileButtonClick(object sender, RoutedEventArgs e)
         {
             var button = (KinectTileButton)e.OriginalSource;
-            var selectionDisplay = new SelectionDisplay(button.Label as string);
+            var selectionDisplay = new SelectionDisplay(button.Label as string) ;
             this.kinectRegionGrid.Children.Add(selectionDisplay);
             e.Handled = true;
+            ///System.Console.WriteLine(button, selectionDisplay);
         }
 
         /// <summary>
