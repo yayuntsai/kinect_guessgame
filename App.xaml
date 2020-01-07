@@ -7,7 +7,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Common/StandardStyles.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
-            <SolidColorBrush x:Key="BlueBrush" Color="#DCCCFF" />
+            <SolidColorBrush x:Key="BlueBrush" Color="#907AD6" />
             <SolidColorBrush x:Key="MediumGreyBrush" Color="#f24"/>
         </ResourceDictionary>
     </Application.Resources>

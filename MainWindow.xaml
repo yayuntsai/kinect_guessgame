@@ -58,8 +58,8 @@
         </Path>
 
         <Style x:Key="KinectHoverButtonStyle" TargetType="{x:Type local:KinectHoverButton}">
-            <Setter Property="Background" Value="LightGray"/>
-            <Setter Property="BorderBrush" Value="DarkGray"/>
+            <Setter Property="Background" Value="#DCCCFF"/>
+            <Setter Property="BorderBrush" Value="#DCCCFF"/>
             <Setter Property="BorderThickness" Value="0"></Setter>
             <Setter Property="Foreground" Value="#FFDBE3"></Setter>
             <Setter Property="Template">
@@ -75,12 +75,12 @@
             </Setter>
             <Style.Triggers>
                 <Trigger Property="IsEnabled" Value="False">
-                    <Setter Property="Foreground" Value="LightGray"/>
-                    <Setter Property="BorderBrush" Value="LightGray"/>
+                    <Setter Property="Foreground" Value="#DCCCFF"/>
+                    <Setter Property="BorderBrush" Value="#DCCCFF"/>
                     <Setter Property="Background" Value="Transparent"></Setter>
                 </Trigger>
                 <Trigger Property="IsHandPointerOver" Value="True">
-                    <Setter Property="Background" Value="#FFDBE3"/>
+                    <Setter Property="Background" Value="#f24"/>
                     <Setter Property="Foreground" Value="White"/>
                 </Trigger>
             </Style.Triggers>
@@ -109,9 +109,9 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0"  Margin="10 0 10 20">
-            <Image HorizontalAlignment="Left" VerticalAlignment="Bottom" Source="Images\Logo.png" Stretch="None" Margin="0 0 0 4"/>
-			<Image HorizontalAlignment="Right" VerticalAlignment="Bottom" Source="Images\King.png" Stretch="None" Margin="0 0 0 4"/>
+        <Grid Grid.Row="0"  Margin="20 20 20 20">
+            <Image HorizontalAlignment="Left" VerticalAlignment="Bottom" Source="Images\Logo.png" Stretch="None" Margin="20 0 0 4"/>
+			<Image HorizontalAlignment="Right" VerticalAlignment="Bottom" Source="Images\King.png" Stretch="None" Margin="20 0 0 4"/>
             <k:KinectUserViewer k:KinectRegion.KinectRegion="{Binding ElementName=kinectRegion}" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" />
             <k:KinectSensorChooserUI HorizontalAlignment="Center" VerticalAlignment="Top" Name="sensorChooserUi" />
             <TextBlock HorizontalAlignment="Right" Margin="0 0 -1 0" VerticalAlignment="Bottom" Foreground="{StaticResource MediumGreyBrush}" FontSize="18"></TextBlock>
@@ -124,22 +124,13 @@
                     <RowDefinition Height="170" />
                 </Grid.RowDefinitions>
                 <k:KinectScrollViewer Grid.Row="0" Name="scrollViewer" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled">
-                    <WrapPanel VerticalAlignment="Center" x:Name="wrapPanel" Orientation="Vertical" k:KinectTileButton.Click="KinectTileButtonClick">
+                    <WrapPanel VerticalAlignment="Center" x:Name="wrapPanel" Orientation="Vertical" k:KinectTileButton.Click="KinectTileButtonClick" >
                         <!-- items for design layout.  They will be replaced at runtime. -->
-                        <k:KinectTileButton Label="1"/>
-                        <k:KinectTileButton Label="2"/>
-                        <k:KinectTileButton Label="3"/>
-                        <k:KinectTileButton Label="4"/>
-                        <k:KinectTileButton Label="5"/>
-                        <k:KinectTileButton Label="6"/>
-                        <k:KinectTileButton Label="7"/>
-                        <k:KinectTileButton Label="8"/>
-                        <k:KinectTileButton Label="9"/>
-                        <k:KinectTileButton Label="10"/>
+                        <k:KinectTileButton/>
                     </WrapPanel>
                 </k:KinectScrollViewer>
                 <Grid Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0, 10, 0, 10">
-                    <Grid.ColumnDefinitions>
+                   <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="10"/>
                         <ColumnDefinition Width="*"/>

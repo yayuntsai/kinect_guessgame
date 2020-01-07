@@ -10,7 +10,6 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
     using System.Globalization;
     using System.Windows;
     using System.Windows.Data;
-    using System.Drawing;
     using Microsoft.Kinect;
     using Microsoft.Kinect.Toolkit;
     using Microsoft.Kinect.Toolkit.Controls;
@@ -68,17 +67,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
             for (var index = 0; index < 13; ++index)
             {
-                ///value = random.Next(1, 13);
                 var button = new KinectTileButton { Label = num_array[index].ToString(CultureInfo.CurrentCulture)};
-                ///var button = new KinectTileButton { Label = 100.ToString(CultureInfo.CurrentCulture) };
-                ///Label.Foreground = new SolidColorBrush(Colors.MediumGreyBrush);
-                this.button.ForeColor = Color.Red;
-                ///button.Label.BackColor = System.Drawing.Color.Red;
-                ///button.BackColor = "1";
-                ///Label.Visible = false;
-                ///button.Background = "{StaticResource BlueBrush}";
-                ///button.Value = value;
-
                 this.wrapPanel.Children.Add(button);
             }
 

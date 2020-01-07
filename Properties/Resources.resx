@@ -120,4 +120,7 @@
   <data name="SelectedMessage" xml:space="preserve">
     <value>♠ {0}</value>
   </data>
+  <data name="SelectedWin" xml:space="preserve">
+    <value>♠{0} You WIN!!!</value>
+  </data>
 </root>

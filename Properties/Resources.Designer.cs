@@ -68,5 +68,12 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.Properties {
                 return ResourceManager.GetString("SelectedMessage", resourceCulture);
             }
         }
+
+        internal static string SelectedWin {
+            get
+            {
+                return ResourceManager.GetString("SelectedWin", resourceCulture);
+            }
+        }
     }
 }

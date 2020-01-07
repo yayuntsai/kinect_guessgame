@@ -16,7 +16,16 @@
         {
             this.InitializeComponent();
 
-            this.messageTextBlock.Text = string.Format(CultureInfo.CurrentCulture, Properties.Resources.SelectedMessage, itemId);
+            
+
+            if(int.Parse(itemId) == 2)
+            {
+                this.messageTextBlock.Text = string.Format(CultureInfo.CurrentCulture, Properties.Resources.SelectedWin, itemId);
+            }
+            else
+            {
+                this.messageTextBlock.Text = string.Format(CultureInfo.CurrentCulture, Properties.Resources.SelectedMessage, itemId);
+            }
         }
 
         /// <summary>
