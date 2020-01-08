@@ -66,15 +66,23 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 num_array[i] = temp;
             }
 
+            //ImageBrush brush = new ImageBrush();
+            ///brush.ImageSource = Properties.Resources.Dinosaur;
+            //brush.ImageSource = new System.Windows.Media.Imaging.BitmapImage(Application.StartupPath + @"Images\Logo.png");
+
+            var brush = new ImageBrush();
+            brush.ImageSource = new System.Windows.Media.Imaging.BitmapImage(new Uri("Images/Dinosaur.png", UriKind.Relative));
+            //button1.Background = brush;
             for (var index = 0; index < 13; ++index)
             {
                 var button = new KinectTileButton { Label = num_array[index].ToString(CultureInfo.CurrentCulture)};
                 
-                button.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#595960"));  //這行可以修改card顏色
-                ///button.Background = null; //不要有背景顏色
+                //button.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#595960"));  //這行可以修改card顏色
+                //button.Background = null; //不要有背景顏色
                 button.LabelBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#595960"));
-                ///button.FlatAppearance.BorderColor = Color.Red;
-                ///button.BackgroundImage = Image.FromFile(@"C:\Images\Logo.jpg");
+                //button.FlatAppearance.BorderColor = Color.Red;
+                button.Background = brush;
+                //button.BackgroundImageLayout = ImageLayout.Center;
                 this.wrapPanel.Children.Add(button);
             }
 

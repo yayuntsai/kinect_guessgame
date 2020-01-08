@@ -75,5 +75,6 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.Properties {
                 return ResourceManager.GetString("SelectedWin", resourceCulture);
             }
         }
+
     }
 }
