@@ -61,7 +61,7 @@
             <Setter Property="Background" Value="#DCCCFF"/>
             <Setter Property="BorderBrush" Value="#DCCCFF"/>
             <Setter Property="BorderThickness" Value="0"></Setter>
-            <Setter Property="Foreground" Value="#FFDBE3"></Setter>
+            <Setter Property="Foreground" Value="#907AD6"></Setter>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type local:KinectHoverButton}">
@@ -80,7 +80,7 @@
                     <Setter Property="Background" Value="Transparent"></Setter>
                 </Trigger>
                 <Trigger Property="IsHandPointerOver" Value="True">
-                    <Setter Property="Background" Value="#FFDBE3"/>
+                    <Setter Property="Background" Value="#907AD6"/>
                     <Setter Property="Foreground" Value="White"/>
                 </Trigger>
             </Style.Triggers>

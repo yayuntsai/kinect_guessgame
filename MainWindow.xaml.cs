@@ -70,8 +70,9 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             {
                 var button = new KinectTileButton { Label = num_array[index].ToString(CultureInfo.CurrentCulture)};
                 
-                ///button.Background = new SolidColorBrush(Colors.Red);  //下面這行可以修改card顏色
-                button.Background = null; //不要有背景顏色
+                button.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#595960"));  //這行可以修改card顏色
+                ///button.Background = null; //不要有背景顏色
+                button.LabelBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#595960"));
                 ///button.FlatAppearance.BorderColor = Color.Red;
                 ///button.BackgroundImage = Image.FromFile(@"C:\Images\Logo.jpg");
                 this.wrapPanel.Children.Add(button);
