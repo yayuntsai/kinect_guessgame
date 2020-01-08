@@ -193,6 +193,9 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             var button = (KinectTileButton)e.OriginalSource;
             var selectionDisplay = new SelectionDisplay(button.Label as string) ;
             this.kinectRegionGrid.Children.Add(selectionDisplay);
+            var brush = new ImageBrush();
+            brush.ImageSource = new System.Windows.Media.Imaging.BitmapImage(new Uri("Images/Dinosaur2.png", UriKind.Relative));
+            button.Background = brush;
             e.Handled = true;
             ///System.Console.WriteLine(button, selectionDisplay);
         }
