@@ -80,7 +80,7 @@
                     <Setter Property="Background" Value="Transparent"></Setter>
                 </Trigger>
                 <Trigger Property="IsHandPointerOver" Value="True">
-                    <Setter Property="Background" Value="#f24"/>
+                    <Setter Property="Background" Value="#FFDBE3"/>
                     <Setter Property="Foreground" Value="White"/>
                 </Trigger>
             </Style.Triggers>

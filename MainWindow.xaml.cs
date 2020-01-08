@@ -10,6 +10,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
     using System.Globalization;
     using System.Windows;
     using System.Windows.Data;
+    using System.Windows.Media;
     using Microsoft.Kinect;
     using Microsoft.Kinect.Toolkit;
     using Microsoft.Kinect.Toolkit.Controls;
@@ -68,6 +69,11 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             for (var index = 0; index < 13; ++index)
             {
                 var button = new KinectTileButton { Label = num_array[index].ToString(CultureInfo.CurrentCulture)};
+                
+                ///button.Background = new SolidColorBrush(Colors.Red);  //下面這行可以修改card顏色
+                button.Background = null; //不要有背景顏色
+                ///button.FlatAppearance.BorderColor = Color.Red;
+                ///button.BackgroundImage = Image.FromFile(@"C:\Images\Logo.jpg");
                 this.wrapPanel.Children.Add(button);
             }
 
