@@ -2,4 +2,4 @@
 
 Demo video: https://pse.is/NVNKX
 
-[!image](layout.png)
+![image](layout.png)
